@@ -6,3 +6,21 @@ body {
     background: radial-gradient(rgb(215, 215, 215), #555260);
     height: 100vh;
 }
+
+table {
+    border: 1px solid red;
+    padding: 10px;
+}
+table th:nth-child(){
+    background: yellow;
+    float: left;
+}
+table tr {
+    padding: 10px;
+}
+table td {
+    padding: 10px;
+}
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
