@@ -11,7 +11,8 @@ table {
     padding: 10px;
     background: #fff;
     border-collapse: collapse;
-    width: 700px;
+    /* width: 700px; */
+    width: 100%;
     /* box-shadow: 1px -3px 2px 4px rgba(172, 164, 164, 0.5); */
     border: 1px solid #999999;
 }
@@ -36,8 +37,60 @@ table tr:nth-child(even) {
     background-color: rgb(182, 175, 175);
   }
   /* Break points for responsiveness */
-  @media screen and (max-width: 960px) {
+  /* @media screen and (max-width: 960px) {
     table {
         width: 100%;
     }
-  }
+  } */
+  /* This query will take effect for any screen smaller than 760px */
+  @media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table, thead, tbody, th, td, tr { 
+        display: flex; 
+        flex-flow: row wrap;
+    }
+    table tr {
+        flex-basis: 100%;
+    }
+    table td {
+        flex-basis: 45%;
+    }
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 50%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	/* td:nth-of-type(1):before { content: "💰 Coin"; }
+	td:nth-of-type(2):before { content: "📄 Code"; }
+	td:nth-of-type(3):before { content: "🤑 Price"; }
+	td:nth-of-type(4):before { content: "📉 Total Supply"; } */
+
+}
