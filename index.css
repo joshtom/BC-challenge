@@ -42,12 +42,12 @@ table tr:nth-child(even) {
   /* 
   Styling for the button => Pagination
   */
-  .nav-element {
+  #buttons {
     display: flex;
     justify-content: space-between;
     background: #ccc;
   }
-  .nav-element button {
+  #buttons button {
       cursor: pointer;
   }
   
