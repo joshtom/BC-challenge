@@ -24,7 +24,7 @@ const json = response => { return response.json() };
             // console.log('Request succeeded', result.data);
             const coins = result.data;
             return coins.map((coin) => {
-                const td = document.querySelector('td:nth-child(1)')
+                
             })
         })
         .catch((err) => console.log('Request failed', err))
