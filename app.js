@@ -7,6 +7,9 @@ const status = (response) => {
         return Promise.reject(new Error(response.statusText));
     }
 }
+
+// Function that creates a new element
+
 //  Function that parses json response
 const json = response => { return response.json() };
 
