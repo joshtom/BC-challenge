@@ -1,7 +1,7 @@
 
 // get the table element
 // var $table = document.getElementById("myTable"),
-var $table = document.querySelector("table"),
+let $table = document.querySelector("table"),
 // number of rows per page
 $n = 10,
 // number of rows of the table
@@ -17,7 +17,7 @@ $i,$ii,$j = ($hasHead)?1:0,
 // holds the first row if it has a (<TH>) & nothing if (<TD>)
 $th = ($hasHead?$table.rows[(0)].outerHTML:"");
 // count the number of pages
-var $pageCount = Math.ceil($rowCount / $n);
+let $pageCount = Math.ceil($rowCount / $n);
 // if we had one page only, then we have nothing to do ..
 if ($pageCount > 1) {
     // assign each row outHTML (tag name & innerHTML) to the array
@@ -30,12 +30,12 @@ if ($pageCount > 1) {
 }
 
 // ($p) is the selected page number. it will be generated when a user clicks a button
-function sort($p) {
+const sort = ($p) => {
     /* create ($rows) a variable to hold the group of rows
     ** to be displayed on the selected page,
     ** ($s) the start point .. the first row in each page, Do The Math
     */
-    var $rows = $th,$s = (($n * $p)-$n);
+    let $rows = $th,$s = (($n * $p)-$n);
     for ($i = $s; $i < ($s+$n) && $i < $tr.length; $i++)
         $rows += $tr[$i];
     
@@ -49,11 +49,11 @@ function sort($p) {
 
 
 // ($pCount) : number of pages,($cur) : current page, the selected one ..
-function pageButtons($pCount,$cur) {
+const pageButtons = ($pCount,$cur) => {
     /* this variables will disable the "Prev" button on 1st page
        and "next" button on the last one */
        
-    var $prevDis = ($cur == 1)?"v-none":"",
+    let $prevDis = ($cur == 1)?"v-none":"",
         $nextDis = ($cur == $pCount)?"v-none":"",
         /* this ($buttons) will hold every single button needed
         ** it will creates each button and sets the onclick attribute
