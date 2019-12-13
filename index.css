@@ -56,7 +56,7 @@ only screen and (max-width: 760px),
     }
     table td {
         flex-basis: 45%;
-        padding: 10px 10px 26px 26px;
+        padding: 26px 10px 26px 10px;
     }
 	
 	thead tr { 
@@ -79,7 +79,7 @@ only screen and (max-width: 760px),
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
-		top: 10px;
+		top: -2px;
 		left: 6px;
 		width: 50%; 
 		padding-right: 10px; 
