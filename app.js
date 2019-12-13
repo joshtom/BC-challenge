@@ -12,11 +12,16 @@ const json = response => { return response.json() };
 
 // Fetching the Actual data from API.COINLORE.COM
     (() => {
-        fetch(`https://api.coinlore.com/api/tickers/`)
+        // fetch(`https://api.coinlore.com/api/tickers/`)
+        fetch(`api.coinlore.com.json`)
         .then(status)
         .then(json)
         .then((result) => {
-            console.log('Request succeeded', result.data);
+            // console.log('Request succeeded', result.data);
+            const coins = result.data;
+            return coins.map((coin) => {
+                const td = document.querySelector('td:nth-child(1)')
+            })
         })
         .catch((err) => console.log('Request failed', err))
     })()
