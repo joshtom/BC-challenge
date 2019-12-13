@@ -139,3 +139,37 @@ function pageButtons($pCount,$cur) {
     
     return $buttons;
 }
+
+
+
+
+Supposed to be in the map function
+ // Create the necessary elements
+                let tr = createNode('tr');
+                let tr2 = createNode('tr');
+                // let th1 = createNode('th');
+                // let th2 = createNode('th');
+                // let th3 = createNode('th');
+                // let th4 = createNode('th');
+                let td = createNode('td');
+                let td2 = createNode('td');
+                let td3 = createNode('td');
+                let td4 = createNode('td');
+                let span = createNode('span');
+
+                td.innerHTML = `${coin.symbol}`;
+                td2.innerHTML = `${coin.name}`;
+                td3.innerHTML = `${coin.price_btc}`;
+                td4.innerHTML = `${coin.tsupply}`;
+                // th1.innerHTML = `💰 Coin`;
+                // th2.innerHTML = `📄 Code`;
+                // th3.innerHTML = `🤑 Price`;
+                // th4.innerHTML = `📉 Total Supply`;
+
+                // //Append all the elements
+                append(tr, td);
+                append(tr, td2);
+                append(tr, td3);
+                append(tr, td4);
+                append(td, span);
+                append(tbody, tr);

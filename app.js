@@ -30,38 +30,81 @@ const json = response => { return response.json() };
             // console.log('Request succeeded', result.data);
             const coins = result.data; //Get the data of the result
             return coins.map((coin) => {
-                // Create the necessary elements
-                let tr = createNode('tr');
-                let tr2 = createNode('tr');
-                // let th1 = createNode('th');
-                // let th2 = createNode('th');
-                // let th3 = createNode('th');
-                // let th4 = createNode('th');
-                let td = createNode('td');
-                let td2 = createNode('td');
-                let td3 = createNode('td');
-                let td4 = createNode('td');
-                let span = createNode('span');
-
-                td.innerHTML = `${coin.symbol}`;
-                td2.innerHTML = `${coin.name}`;
-                td3.innerHTML = `${coin.price_btc}`;
-                td4.innerHTML = `${coin.tsupply}`;
-                // th1.innerHTML = `💰 Coin`;
-                // th2.innerHTML = `📄 Code`;
-                // th3.innerHTML = `🤑 Price`;
-                // th4.innerHTML = `📉 Total Supply`;
-
-                // //Append all the elements
-                append(tr, td);
-                append(tr, td2);
-                append(tr, td3);
-                append(tr, td4);
-                append(td, span);
-                append(tbody, tr);
+               var objJson = coin;
             })
         })
         .catch((err) => console.log('Request failed', err))
     })()
 
 
+    var current_page = 1;
+    var records_per_page = 2;
+    
+    var objJson = [
+        { adName: "AdName 1"},
+        { adName: "AdName 2"},
+        { adName: "AdName 3"},
+        { adName: "AdName 4"},
+        { adName: "AdName 5"},
+        { adName: "AdName 6"},
+        { adName: "AdName 7"},
+        { adName: "AdName 8"},
+        { adName: "AdName 9"},
+        { adName: "AdName 10"}
+    ]; // Can be obtained from another source, such as your objJson variable
+    
+    function prevPage()
+    {
+        if (current_page > 1) {
+            current_page--;
+            changePage(current_page);
+        }
+    }
+    
+    function nextPage()
+    {
+        if (current_page < numPages()) {
+            current_page++;
+            changePage(current_page);
+        }
+    }
+        
+    function changePage(page)
+    {
+        var btn_next = document.getElementById("btn_next");
+        var btn_prev = document.getElementById("btn_prev");
+        var listing_table = document.getElementById("listingTable");
+        var page_span = document.getElementById("page");
+     
+        // Validate page
+        if (page < 1) page = 1;
+        if (page > numPages()) page = numPages();
+    
+        listing_table.innerHTML = "";
+    
+        for (var i = (page-1) * records_per_page; i < (page * records_per_page); i++) {
+            listing_table.innerHTML += objJson[i].adName + "<br>";
+        }
+        page_span.innerHTML = page;
+    
+        if (page == 1) {
+            btn_prev.style.visibility = "hidden";
+        } else {
+            btn_prev.style.visibility = "visible";
+        }
+    
+        if (page == numPages()) {
+            btn_next.style.visibility = "hidden";
+        } else {
+            btn_next.style.visibility = "visible";
+        }
+    }
+    
+    function numPages()
+    {
+        return Math.ceil(objJson.length / records_per_page);
+    }
+    
+    window.onload = function() {
+        changePage(1);
+    };
