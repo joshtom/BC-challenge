@@ -7,7 +7,8 @@ body {
     height: 100vh;
 }
 main {
-    box-shadow: 3px 3px 5px 6px #00000036
+    box-shadow: 3px 3px 5px 6px #00000036;
+    padding: 0px 0px 5px 0px;
 }
 table {
     padding: 10px;

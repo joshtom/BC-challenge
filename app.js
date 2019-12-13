@@ -1,3 +1,3 @@
-const x = document.querySelector("table")[0].innerHTML;
+const x = document.querySelector("table").rows[0].innerHTML;
 
 console.log(x);
