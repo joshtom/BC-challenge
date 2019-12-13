@@ -3,17 +3,19 @@ body {
     padding: 0;
     display: grid;
     place-items: center;
-    background: radial-gradient(rgb(215, 215, 215), #555260);
+    background: radial-gradient(rgb(215, 215, 215), #ccc);
     height: 100vh;
 }
-
+main {
+    box-shadow: 3px 3px 5px 6px #00000036
+}
 table {
     padding: 10px;
     background: #fff;
     border-collapse: collapse;
     /* width: 700px; */
     width: 100%;
-    /* box-shadow: 1px -3px 2px 4px rgba(172, 164, 164, 0.5); */
+    
 }
 table thead th {
     vertical-align: bottom;
