@@ -1,31 +1,4 @@
-// const $ = (prop) => {
-//     return document.querySelector(prop);
-// }
-// // const x = $("table").rows[0].innerHTML;
 
-// // Get the number of rows
-// const table = $("table");
-// const rowCount = table.rows.length;
-
-// //Check if table has head row
-// const firstRow = table.rows[0].firstElementChild.tagName, hasHead = (firstRow === "TH");
-
-// //th variable will hold the first row if true and will hold nothing if it false
-// const th = (hasHead?table.rows[0].outerHTML:"");
-
-// //Getting the number of pages
-// const pageCount = Math.ceil(rowCount / n);
-
-// const tr = [], i, ii, j = (hasHead)?1:0;
-
-// for (i = j, ii = 0, i < (rowCount+j));
-// i++, ii++
-
-// {tr[ii] = table.rows[i].outerHTML;}
-
-
-
-// ============================================================= //
 // get the table element
 // var $table = document.getElementById("myTable"),
 var $table = document.querySelector("table"),
