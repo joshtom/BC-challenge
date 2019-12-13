@@ -9,6 +9,7 @@ const status = (response) => {
 }
 
 // Function that creates a new element
+const createNode = (el) => { return document.createElement(el); }
 
 //  Function that parses json response
 const json = response => { return response.json() };
