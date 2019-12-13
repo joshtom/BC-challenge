@@ -47,8 +47,11 @@ table tr:nth-child(even) {
     justify-content: space-between;
     background: #ccc;
   }
-  #buttons button {
+  #buttons input[type=button] {
       cursor: pointer;
+      /* background: red !important; */
+      padding: 7px;
+      border: 1px solid #999999;
   }
   #buttons .v-none {
       visibility: hidden;
