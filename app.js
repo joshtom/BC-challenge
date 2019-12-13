@@ -7,6 +7,9 @@ const status = (response) => {
     }
 }
 
+//  Function that parses json response
+const json = response => { return response.json() };
+
 
 // Adding Pagination to the table
 // get the table element
