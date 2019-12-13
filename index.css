@@ -56,6 +56,7 @@ only screen and (max-width: 760px),
     }
     table td {
         flex-basis: 45%;
+        padding: 10px 10px 26px 26px;
     }
 	
 	thead tr { 
@@ -78,7 +79,7 @@ only screen and (max-width: 760px),
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
-		top: 6px;
+		top: 10px;
 		left: 6px;
 		width: 50%; 
 		padding-right: 10px; 
@@ -88,9 +89,9 @@ only screen and (max-width: 760px),
 	/*
 	Label the data
 	*/
-	/* td:nth-of-type(1):before { content: "💰 Coin"; }
+	td:nth-of-type(1):before { content: "💰 Coin"; }
 	td:nth-of-type(2):before { content: "📄 Code"; }
 	td:nth-of-type(3):before { content: "🤑 Price"; }
-	td:nth-of-type(4):before { content: "📉 Total Supply"; } */
+	td:nth-of-type(4):before { content: "📉 Total Supply"; }
 
 }
