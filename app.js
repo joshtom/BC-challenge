@@ -15,6 +15,7 @@ const createNode = (el) => { return document.createElement(el); }
 const append = (parent, el) => { return parent.appendChild(el); }
 
 // Selecting the tbody => This is where new element will be created and appended
+const tbody = document.querySelector("tbody");
 
 //  Function that parses json response
 const json = response => { return response.json() };
