@@ -1,4 +1,8 @@
+// Fetching the Actual data from API.COINLORE.COM
 
+
+
+// Adding Pagination to the table
 // get the table element
 // var $table = document.getElementById("myTable"),
 let $table = document.querySelector("table"),
@@ -30,7 +34,7 @@ if ($pageCount > 1) {
 }
 
 // ($p) is the selected page number. it will be generated when a user clicks a button
-const sort = ($p) => {
+function sort($p) {
     /* create ($rows) a variable to hold the group of rows
     ** to be displayed on the selected page,
     ** ($s) the start point .. the first row in each page, Do The Math
@@ -49,7 +53,7 @@ const sort = ($p) => {
 
 
 // ($pCount) : number of pages,($cur) : current page, the selected one ..
-const pageButtons = ($pCount,$cur) => {
+function pageButtons($pCount,$cur) {
     /* this variables will disable the "Prev" button on 1st page
        and "next" button on the last one */
        
