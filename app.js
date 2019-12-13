@@ -30,7 +30,7 @@ const json = response => { return response.json() };
             // console.log('Request succeeded', result.data);
             const coins = result.data; //Get the data of the result
             return coins.map((coin) => {
-               var objJson = coin;
+            //    window.objJson = coin;
             })
         })
         .catch((err) => console.log('Request failed', err))
@@ -73,7 +73,7 @@ const json = response => { return response.json() };
     {
         var btn_next = document.getElementById("btn_next");
         var btn_prev = document.getElementById("btn_prev");
-        var listing_table = document.getElementById("listingTable");
+        var listing_table = document.querySelector("tbody");
         var page_span = document.getElementById("page");
      
         // Validate page
