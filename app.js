@@ -32,6 +32,8 @@ const json = response => { return response.json() };
             return coins.map((coin) => {
                 // Create the necessary elements
                 let tr = createNode('tr');
+                let td = createNode('td');
+                let span = createNode('span');
             })
         })
         .catch((err) => console.log('Request failed', err))
