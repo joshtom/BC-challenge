@@ -40,8 +40,10 @@ table tr:nth-child(even) {
   Styling for the button => Pagination
   */
   .nav-element {
-
+    display: flex;
+    justify-content: space-between;
   }
+  
   
   /* 
   *
