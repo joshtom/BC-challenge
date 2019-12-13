@@ -42,6 +42,10 @@ table tr:nth-child(even) {
   .nav-element {
     display: flex;
     justify-content: space-between;
+    background: #ccc;
+  }
+  .nav-element button {
+      cursor: pointer;
   }
   
   
