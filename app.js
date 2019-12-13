@@ -11,6 +11,9 @@ const status = (response) => {
 // Function that creates a new element
 const createNode = (el) => { return document.createElement(el); }
 
+// Function that appends the first parameter(el) to the first one
+const append = (parent, el) => { return parent.appendChild(el); }
+
 //  Function that parses json response
 const json = response => { return response.json() };
 
