@@ -13,7 +13,12 @@ const json = response => { return response.json() };
 // Fetching the Actual data from API.COINLORE.COM
     (() => {
         fetch(`https://api.coinlore.com/api/tickers/`)
-        .then()
+        .then(status)
+        .then(json)
+        .then((result) => {
+            console.log('Request succeeded', result.data);
+        })
+        .catch((err) => console.log('Request failed', err))
     })()
 
 
@@ -63,7 +68,7 @@ function sort($p) {
     // create the pagination buttons
     document.getElementById("buttons").innerHTML = pageButtons($pageCount,$p);
     // CSS Stuff
-    document.getElementById("id"+$p).setAttribute("class","active");
+    // document.getElementById("id"+$p).setAttribute("class","active");
 }
 
 
