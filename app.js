@@ -1,5 +1,11 @@
 // Fetching the Actual data from API.COINLORE.COM
-
+const status = (response) => {
+    if(response.status >= 200 && response.status < 300) {
+       return Promise.resolve(response);
+    } else {
+        return Promise.reject(new Error(response.statusText));
+    }
+}
 
 
 // Adding Pagination to the table
