@@ -79,15 +79,17 @@ function sort($p) {
 function pageButtons($pCount,$cur) {
     /* this variables will disable the "Prev" button on 1st page
        and "next" button on the last one */
-    var $prevDis = ($cur == 1)?"disabled":"",
-        $nextDis = ($cur == $pCount)?"disabled":"",
+       
+    var $prevDis = ($cur == 1)?"v-none":"",
+        $nextDis = ($cur == $pCount)?"v-none":"",
         /* this ($buttons) will hold every single button needed
         ** it will creates each button and sets the onclick attribute
         ** to the "sort" function with a special ($p) number..
         */
-        $buttons = "<input type='button' value='&lt;&lt; Prev' onclick='sort("+($cur - 1)+")' "+$prevDis+">";
+        $buttons = "<input type='button' value='&lt;&lt; Prev' onclick='sort("+($cur - 1)+")' class='"+$prevDis+"'>";
+        $buttons += "<input type='button' value='Next &gt;&gt;' onclick='sort("+($cur + 1)+")' class='"+$nextDis+"'>";
     for ($i=1; $i<=$pCount;$i++)
-        $buttons += "<input type='button' id='id"+$i+"'value='"+$i+"' onclick='sort("+$i+")'>";
-    $buttons += "<input type='button' value='Next &gt;&gt;' onclick='sort("+($cur + 1)+")' "+$nextDis+">";
+        // $buttons += "<input type='button' id='id"+$i+"'value='"+$i+"' onclick='sort("+$i+")'>";
+    
     return $buttons;
 }

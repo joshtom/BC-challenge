@@ -50,6 +50,9 @@ table tr:nth-child(even) {
   #buttons button {
       cursor: pointer;
   }
+  #buttons .v-none {
+      visibility: hidden;
+  }
   
   
   /* 
