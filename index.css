@@ -35,6 +35,13 @@ table td {
 table tr:nth-child(even) {
     background-color: #ccc;
   }
+
+  /* 
+  Styling for the button => Pagination
+  */
+  .nav-element {
+
+  }
   
   /* 
   *
