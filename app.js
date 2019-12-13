@@ -28,9 +28,10 @@ const json = response => { return response.json() };
         .then(json)
         .then((result) => {
             // console.log('Request succeeded', result.data);
-            const coins = result.data;
+            const coins = result.data; //Get the data of the result
             return coins.map((coin) => {
-                
+                // Create the necessary elements
+                let tr = createNode('tr');
             })
         })
         .catch((err) => console.log('Request failed', err))
