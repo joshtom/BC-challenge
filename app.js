@@ -1,4 +1,5 @@
-// Fetching the Actual data from API.COINLORE.COM
+
+//  Function that holds response error
 const status = (response) => {
     if(response.status >= 200 && response.status < 300) {
        return Promise.resolve(response);
@@ -6,9 +7,14 @@ const status = (response) => {
         return Promise.reject(new Error(response.statusText));
     }
 }
-
 //  Function that parses json response
 const json = response => { return response.json() };
+
+// Fetching the Actual data from API.COINLORE.COM
+    (() => {
+        fetch(`https://api.coinlore.com/api/tickers/`)
+        .then()
+    })()
 
 
 // Adding Pagination to the table
